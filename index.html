@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+
+		<!-- <link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/> -->
+		<link rel="stylesheet" href="dist/css/style.css" />
+	</head>
+	<body>
+		<!-- main container -->
+		<div class="main-container">
+			<!-- HEADER -->
+			<div class="header">
+				<h1>hangman</h1>
+				<p>find the word - enter a letter</p>
+			</div>
+
+			<div class="main">
+				<!-- HANGMAN -->
+				<svg class="hangman-container" height="300" width="200">
+					<!-- hanging rod -->
+					<line x1="50" y1="10" x2="130" y2="10" />
+					<line x1="50" y1="10" x2="50" y2="230" />
+					<line x1="130" y1="10" x2="130" y2="70" />
+					<line x1="30" y1="230" x2="70" y2="230" />
+
+					<!-- head -->
+					<circle
+						cx="130"
+						cy="90"
+						r="20"
+						id="part-1"
+						class="body-part"
+					/>
+
+					<!-- body -->
+					<line
+						x1="130"
+						y1="110"
+						x2="130"
+						y2="170"
+						class="body-part"
+						id="part-2"
+					/>
+
+					<!-- hands -->
+					<line
+						x1="130"
+						y1="140"
+						x2="100"
+						y2="120"
+						class="body-part"
+						id="part-3"
+					/>
+					<line
+						x1="130"
+						y1="140"
+						x2="160"
+						y2="120"
+						class="body-part"
+						id="part-4"
+					/>
+
+					<!-- legs -->
+					<line
+						x1="130"
+						y1="170"
+						x2="100"
+						y2="200"
+						class="body-part"
+						id="part-5"
+					/>
+					<line
+						x1="130"
+						y1="170"
+						x2="160"
+						y2="200"
+						class="body-part"
+						id="part-6"
+					/>
+				</svg>
+
+				<div class="wrong-letters">
+					wrong:
+				</div>
+			</div>
+
+			<div class="word-to-be-guessed"></div>
+		</div>
+
+		<!-- MODAL -->
+		<div class="modal">
+			<div class="modal-content">
+				<h1 class="result"></h1>
+				<h2 class="correct-word"></h2>
+				<button class="button replay-button">play again</button>
+			</div>
+		</div>
+
+		<!-- ALERT -->
+		<div class="alert"></div>
+
+		<script type="module" src="src/javascript/index.js"></script>
+	</body>
+</html>

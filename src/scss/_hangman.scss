@@ -1,0 +1,87 @@
+.main-container {
+	width: 50rem;
+	padding: 2rem;
+
+	.header {
+		margin-bottom: 3rem;
+
+		text-align: center;
+
+		h1 {
+			font-size: 3rem;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+		}
+
+		p {
+			font-size: 1.5rem;
+			text-transform: capitalize;
+		}
+	}
+}
+
+.main {
+	@include flex(space-between, flex-start);
+
+	.hangman-container {
+		flex-basis: 50%;
+		display: block;
+		margin: 0 auto;
+		fill: transparent;
+		stroke: white;
+		stroke-width: 3px;
+		stroke-linecap: round;
+
+		.body-part {
+			visibility: hidden;
+		}
+	}
+
+	.wrong-letters {
+		font-size: 2rem;
+		flex-basis: 30%;
+
+		.wrong-letter {
+			margin: 0 2px;
+
+			&::after {
+				content: ",";
+			}
+		}
+	}
+}
+
+.word-to-be-guessed {
+	@include flex(center, center);
+	margin: auto;
+	font-size: 2rem;
+	text-transform: uppercase;
+
+	.letter-container {
+		padding: 0 1rem;
+		position: relative;
+		margin-right: 3rem;
+
+		.letter {
+			font-size: 2.5rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: white;
+			opacity: 0;
+
+			&.show {
+				opacity: 1;
+			}
+		}
+
+		.underline {
+			position: absolute;
+			left: 0;
+			bottom: -1rem;
+			width: 100%;
+			height: 3px;
+			border-radius: 3px;
+			background-color: $primary-blue;
+		}
+	}
+}

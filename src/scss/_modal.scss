@@ -1,0 +1,27 @@
+.modal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	display: none;
+
+	.modal-content {
+		padding: 2rem;
+		border-radius: 5px;
+		background-color: $primary-blue;
+		text-align: center;
+		height: 15rem;
+		width: 40rem;
+		box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+		text-transform: capitalize;
+		margin: 20rem auto;
+
+		h1,
+		h2 {
+			margin-bottom: 2rem;
+		}
+	}
+}
